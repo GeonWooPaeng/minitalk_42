@@ -1,3 +1,13 @@
 
-signal 함수
-https://badayak.com/4447
+< signal 함수 >
+
+https://reakwon.tistory.com/46
+https://reakwon.tistory.com/53
+
+
+< socket programming >
+https://aticleworld.com/socket-programming-in-c-using-tcpip/
+
+
+< github >
+https://github.com/atomatoe/minitalk
