@@ -1,6 +1,7 @@
+< 전반적인 이해 >
+https://www.joinc.co.kr/w/Site/system_programing/Book_LSP/ch06_Signal
 
 < signal 함수 >
-
 https://reakwon.tistory.com/46
 https://reakwon.tistory.com/53
 
@@ -8,6 +9,10 @@ https://reakwon.tistory.com/53
 < socket programming >
 https://aticleworld.com/socket-programming-in-c-using-tcpip/
 
+< sigaction -> SA_SIGINFO >
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=skssim&logNo=121271980
+https://man7.org/linux/man-pages/man2/sigaction.2.html
 
 < github >
 https://github.com/atomatoe/minitalk
+https://github.com/dcavalei/minitalk
