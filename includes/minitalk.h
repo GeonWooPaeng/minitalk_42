@@ -6,7 +6,7 @@
 /*   By: gpaeng <gpaeng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:00:01 by gpaeng            #+#    #+#             */
-/*   Updated: 2021/06/25 19:44:11 by gpaeng           ###   ########.fr       */
+/*   Updated: 2021/06/25 21:04:22 by gpaeng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,17 @@ int			ft_atoi(char *nptr);
 void		ft_decimal_conversion(int server_id, char msg, int power);
 void		ft_send_message(int server_id, char *msgs);
 void		ft_handler(int signum, siginfo_t *siginfo, void *unused);
+
+/*
+**ft_server_utils.c
+*/
+
+
+/*
+**ft_server.c
+*/
+
+
 
 
 #endif

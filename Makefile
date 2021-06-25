@@ -9,8 +9,14 @@ DIR_H = ./includes/
 DIR_S = ./srcs/
 DIR_O = ./
 
-SRC1 = client/main.c
-SRC2 = server/main.c`
+SRC1 =	ft_all_utils.c				\
+		client/ft_client_utils.c	\
+		client/ft_client.c			\
+
+
+SRC2 =	ft_all_utils.c				\
+		server/ft_server_utils.c	\
+		server/ft_server.c			\
 
 SRCS1 = $(addprefix $(DIR_S), $(SRC1))
 SRCS2 = $(addprefix $(DIR_S), $(SRC2))
@@ -28,10 +34,10 @@ $(NAME2): $(OBJS2)
 	$(CC) $(CFLAGS) - c $< -I $(DIR_H) - o $@
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS1) $(OBJS2)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME1) $(NAME2)
 
 re: fclean all
 
