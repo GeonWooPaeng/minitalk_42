@@ -1,6 +1,7 @@
 CC = gcc
 CFLAGS = -Wextra -Werror -Wall
 CFLAGS += -g
+
 NAME1 = client
 NAME2 = server
 
@@ -16,7 +17,6 @@ SRCS2 = $(addprefix $(DIR_S), $(SRC2))
 
 OBJS1 = $(SRCS1.c=.o)
 OBJS2 = $(SRCS2.c=.o)
-
 
 $(NAME1): $(OBJS1)
 	$(CC) -o $(NAME1) -I $(DIR_H) $(OBJS1) $(CFLAGS)

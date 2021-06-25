@@ -23,7 +23,22 @@
 
 <br/>
 
-## SIGUSR1, SIGUSR2
+> ## kill()
+
+<br/>
+
+- process에 signal을 전달하기위해 사용하는 함수
+
+```c
+
+int kill(pid_t process_id, int sig);
+// process_id로 sig를 보낸다.
+
+```
+
+<br/>
+
+> ## SIGUSR1, SIGUSR2
 
 <br/>
 
@@ -31,16 +46,58 @@
 
 <br/>
 
-### POSIX 시스템
+### POSIX 시스템 (다시 작성하기)
 - <signal.h> 헤더는 시스템에서 발생하는 신호를 참조하는 데 사용되는 다음 매크로를 정의해야합니다. 여기에 정의 된 신호 SIG는 대문자가 뒤 따르는 문자로 시작합니다 . 매크로는 유형 int과 고유 한 값이있는 양의 정수 상수 표현식으로 확장 됩니다. 따라서 신호 이름은 매크로 여야합니다 
 
 <br/>
 
-## sigaction()
+> ## signal()
+
+<br/>
+
+- signal 처리를 설정
+
+<br/>
+
+```c
+// ctrl + c 눌렀을 때 signal 받아오게 하기
+// => ctrl + c로 프로그램 종료 대신 ft_handler실행
+// SIGINT == ctrl + c
+
+#include <signal.h>
+#include <unistd.h>
+#include <stdio.h>
+
+void ft_handler(int signum)
+{
+    printf("시그널 받았습니다.(%d)\n", SIGINT);
+    sleep(2);
+}
+
+int main(int argc, char *argv[])
+{
+    int idx;
+
+    idx = 0;
+    signal(SIGINT, (void *)ft_handler);
+    while (1)
+    {
+        printf("process 실행 중 %d\n", idx);
+        sleep(1);
+        idx++;
+    }
+}
+
+```
+
+<br/>
+
+> ## sigaction()
 
 <br/>
 
 - signal() 와 마찬가지로 특정 신호를 수신하기 위해 사용합니다.
+- signal을 객체 단위로 제어 할 수 있다.
 
 <br/>
 
@@ -60,7 +117,7 @@
 struct sigaction {
     int sa_flags;
     union {
-        void (*sa_handler)();
+        void (*sa_handler)(); 
         void (*sa_sigaction)(int, siginfo_t *, void *);
     }_funcptr;
 }
@@ -97,6 +154,16 @@ int sigaction(int signum, const struct sigaction *act, const struct sigaction *o
 
 ```
 
+<br/>
 
+> ## pause()
 
+<br/>
 
+<https://man7.org/linux/man-pages/man2/pause.2.html>
+
+<br/>
+
+- signal을 수신할 때까지 대기합니다.
+
+<br/>

@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.c                                         :+:      :+:    :+:   */
+/*   ft_client_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpaeng <gpaeng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/25 12:28:52 by gpaeng            #+#    #+#             */
-/*   Updated: 2021/06/25 14:40:06 by gpaeng           ###   ########.fr       */
+/*   Created: 2021/06/25 17:59:02 by gpaeng            #+#    #+#             */
+/*   Updated: 2021/06/25 19:40:19 by gpaeng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/client.h"
+
+#include "../../includes/minitalk.h"
 
 int			ft_isspace(char c)
 {
@@ -23,7 +24,7 @@ int	ft_isdigit(int c)
 	return (c >= '0' && c <= '9');
 }
 
-int			ft_atoi(const char *nptr)
+int			ft_atoi(char *nptr)
 {
 	int result;
 	int sign;
@@ -43,22 +44,4 @@ int			ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (sign * result);
-}
-
-void	ft_putstr(char *s)
-{
-	int	idx;
-
-	idx = 0;
-	while (s[idx])
-	{
-		write(1, s[idx], 1);
-		idx++;
-	}
-}
-
-void	ft_error(char *s)
-{
-	ft_putstr(s);
-	exit(0);
 }
