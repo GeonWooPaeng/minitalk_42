@@ -6,7 +6,7 @@
 /*   By: gpaeng <gpaeng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:00:01 by gpaeng            #+#    #+#             */
-/*   Updated: 2021/06/26 17:55:08 by gpaeng           ###   ########.fr       */
+/*   Updated: 2021/06/26 19:50:56 by gpaeng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ void		ft_handler(int signum, siginfo_t *siginfo, void *unused);
 */
 void	ft_putchar(char s);
 void	ft_putnbr(int num);
+
 /*
 **ft_server.c
 */
-
-
+void	ft_handler(int signum, siginfo_t *siginfo, void *unused);
 
 
 #endif

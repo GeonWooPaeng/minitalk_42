@@ -38,16 +38,28 @@ int kill(pid_t process_id, int sig);
 
 <br/>
 
-> ## SIGUSR1, SIGUSR2
+
+<br/>
+
+> ## Unix 신호
+
+<br/>
+
+<https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%89%EC%8A%A4_%EC%8B%A0%ED%98%B8>
+
+<br/>
+
+#### posix
+
+<https://ko.wikipedia.org/wiki/POSIX>
+
+<br/>
+
+### SIGUSR1, SIGUSR2
 
 <br/>
 
 - "특별한" 사전 정의 된 의미없이 사용자가 사용하다록 예약된 신호
-
-<br/>
-
-### POSIX 시스템 (다시 작성하기)
-- <signal.h> 헤더는 시스템에서 발생하는 신호를 참조하는 데 사용되는 다음 매크로를 정의해야합니다. 여기에 정의 된 신호 SIG는 대문자가 뒤 따르는 문자로 시작합니다 . 매크로는 유형 int과 고유 한 값이있는 양의 정수 상수 표현식으로 확장 됩니다. 따라서 신호 이름은 매크로 여야합니다 
 
 <br/>
 
