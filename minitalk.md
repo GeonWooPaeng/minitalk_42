@@ -167,3 +167,13 @@ int sigaction(int signum, const struct sigaction *act, const struct sigaction *o
 - signal을 수신할 때까지 대기합니다.
 
 <br/>
+
+> ## pid 범위
+
+<br/>
+
+<https://stackoverflow.com/questions/16599463/what-is-the-value-range-of-thread-and-process-id>
+
+<https://jybaek.tistory.com/112>
+
+<br/>
