@@ -6,14 +6,13 @@
 /*   By: gpaeng <gpaeng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 17:59:02 by gpaeng            #+#    #+#             */
-/*   Updated: 2021/06/25 19:40:19 by gpaeng           ###   ########.fr       */
+/*   Updated: 2021/06/28 14:44:08 by gpaeng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../../includes/minitalk.h"
 
-int			ft_isspace(char c)
+int	ft_isspace(char c)
 {
 	return (c == '\f' || c == '\n' || c == '\r' ||
 	c == '\t' || c == '\v' || c == ' ');
@@ -24,7 +23,7 @@ int	ft_isdigit(int c)
 	return (c >= '0' && c <= '9');
 }
 
-int			ft_atoi(char *nptr)
+int	ft_atoi(char *nptr)
 {
 	int result;
 	int sign;
