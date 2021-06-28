@@ -3,16 +3,26 @@
 <br/>
 
 - client 와 server 사이의 communication(문자열)
+
+
 - server는 먼저 시작되어야하며 시작된 후에 PID를 표시한다.
+
+
 - client는 [server_PID] [string] 를 매개 변수로 사용한다.
+
+
 - client는 매개 변수로 전달 된 문자열을 server에 전달한다.
-  
     (문자열이 수신되면 server는 이를 표시해야합니다.)
+    
 - 프로그램 간의 통신은 UNIX 신호를 사용해서만 이루어져야한다.
+
+
 - server는 문자열을 매우 빠르게 표시 할 수 있어야한다.
-  
     (힌트 : 100 자에 대해 1 초는 COLOSSAL).
+    
 - server를 다시 시작할 필요없이 여러 client로 연속으로 문자열을받을 수 있어야한다.
+
+
 - SIGUSR1 및 SIGUSR2 신호 만 사용할 수 있다.
 
 <br/>
@@ -112,8 +122,6 @@ int main(int argc, char *argv[])
 - signal을 객체 단위로 제어 할 수 있다.
 
 <br/>
-
-- helpsite
 
 <https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=skssim&logNo=121271980>
 
