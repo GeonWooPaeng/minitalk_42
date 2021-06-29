@@ -197,3 +197,61 @@ int sigaction(int signum, const struct sigaction *act, const struct sigaction *o
 <https://jybaek.tistory.com/112>
 
 <br/>
+
+## 실행
+
+<br/>
+
+- server terminal
+
+
+```c
+
+./server
+
+```
+
+<br/>
+
+- client terminal
+- server_id: server 실행해서 나온 id
+
+```c
+
+./client [server_id] [문자열]
+
+```
+
+<br/>
+
+### 문자열 들어간 속도 파악
+
+<br/>
+
+```c
+#include <time.h>
+#include <stdio.h>
+
+//...
+
+void	ft_send_message(int server_id, char *msgs)
+{
+	int	idx;
+
+	clock_t start = clock(); //속도
+	idx = 0;
+	while (msgs[idx] != '\0')
+	{
+		ft_binary_send(server_id, msgs[idx]);
+		idx++;
+	}
+	ft_binary_send(server_id, '\0');
+	clock_t end = clock(); // 속도
+	printf("sec 속도: %lf\n", (double)(end - start)/CLOCKS_PER_SEC); //속도
+	
+}
+
+//...
+
+```
+
